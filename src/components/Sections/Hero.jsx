@@ -42,7 +42,7 @@ export const Hero = () => {
             <Linkedin className="social-icons hover:text-[#0A66C2]" />
           </a>
           <a
-            href="https://www.instagram.com/ifechukwuokuma"
+            href="https://www.instagram.com/ifechukwu.okuma"
             target="_blank"
             rel="noreferrer"
           >
@@ -90,7 +90,7 @@ export const Hero = () => {
           </h1>
 
           {/* Subtext */}
-          <p className="text-gray-600 max-w-lg">
+          <p className="text-gray-600 max-w-lg mx-auto items-center">
             I help businesses stand out online with{" "}
             <span className="font-semibold text-gray-800">
               custom-coded websites

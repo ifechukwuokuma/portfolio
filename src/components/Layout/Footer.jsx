@@ -39,7 +39,7 @@ export const Footer = () => {
             <Linkedin size={20} />
           </a>
           <a
-            href="https://www.instagram.com/ifechukwuokuma"
+            href="https://www.instagram.com/ifechukwu.okuma"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-700 hover:text-[#F9B233] transition"

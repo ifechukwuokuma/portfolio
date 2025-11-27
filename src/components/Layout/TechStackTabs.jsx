@@ -47,12 +47,12 @@ export const TechStackTabs = () => {
       { name: "GitHub", icon: <Globe size={26} /> },
       { name: "VS Code", icon: <FileCode2 size={26} /> },
       { name: "Tailwind CSS", icon: <Palette size={26} /> },
+      { name: "Bootstrap CSS", icon: <Layers size={26} /> }, // NEW
     ],
   };
 
   return (
-    <section className="py-13 text-center" id="techstack">
-      {/* Section Title */}
+    <section className="py-17 text-center" id="techstack">
       <div className="mb-8">
         <p className="text-[#F9B233] font-semibold">— My Favorite Tools</p>
         <h2 className="text-3xl md:text-4xl font-bold text-black">
@@ -61,7 +61,6 @@ export const TechStackTabs = () => {
         </h2>
       </div>
 
-      {/* Tabs */}
       <div className="flex flex-wrap justify-center gap-3 mb-8">
         {tabs.map((tab) => (
           <button
@@ -79,7 +78,6 @@ export const TechStackTabs = () => {
         ))}
       </div>
 
-      {/* Icons Grid */}
       <div className="flex flex-wrap justify-center gap-2 mb-z">
         {content[activeTab].map((tool, index) => (
           <div

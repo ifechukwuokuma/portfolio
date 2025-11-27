@@ -2,85 +2,51 @@
 export const servicesData = {
   webServices: [
     {
-      id: 1,
-      icon: "MonitorSmartphone",
-      title: "UX Audit & Website Redesign",
-      description:
-        "I analyze your website’s user experience, identify usability issues, and redesign it to improve engagement and performance.",
-    },
+  id: 1,
+  icon: "MonitorSmartphone",
+  title: "UX Audit & SEO Optimization",
+  description:
+    "Identify what’s hurting your user experience, refine the design for smoother interaction, and improveyour search visibility through technical SEO and performance improvements.",
+},
     {
-      id: 2,
-      icon: "Layout",
-      title: "Web Design",
-      description:
-        "I design visually appealing, responsive, and user-friendly websites that strengthen your brand and engage visitors.",
-    },
-    {
-      id: 3,
-      icon: "ShoppingBag",
-      title: "E-commerce Web Design",
-      description:
-        "I build high-performing online stores with modern UI, smooth checkout flow, and optimized user experience that convert visitors into buyers.",
-    },
-    {
-      id: 4,
-      icon: "Code2",
-      title: "Software Development",
-      description:
-        "I develop custom web applications and software solutions that streamline processes and improve business performance.",
-    },
-    {
-      id: 5,
-      icon: "Wrench",
-      title: "Maintenance & Support",
-      description:
-        "I provide continuous updates, bug fixes, and performance checks to keep your website secure, fast, and running smoothly.",
-    },
-    {
-      id: 6,
-      icon: "Search",
-      title: "SEO Optimization",
-      description:
-        "I help your website rank higher on search engines through technical SEO, content optimization, and performance improvement.",
-    },
+  id: 2,
+  icon: "LayoutGrid",
+  title: "Web Design & E-Commerce",
+  description:
+    "Build clean, responsive websites and for e-commerce brands, I build modern online stores with smooth navigation, clear product layouts, and a checkout experience that converts.",
+},
+{
+  id: 3,
+  icon: "Code2",
+  title: "Software Development",
+  description:
+    "Develop custom web applications and digital tools that improve workflows, automate tasks, and support business growth.",
+}
   ],
 
   beyondTech: [
   {
-    id: 7,
-    icon: "Video",
-    title: "UGC & Brand Videos",
-    description:
-      "Creating authentic short-form videos that align with brand voice and drive engagement.",
-  },
+  id: 3,
+  icon: "Video",
+  title: "UGC, Brand & Product Videos",
+  description:
+    "Creating authentic short-form videos and reviewing tech products to align with brand voice, engage audiences, and showcase offerings effectively.",
+},
   {
-    id: 8,
-    icon: "Monitor",
-    title: "Tech & Product Reviews",
-    description:
-      "Reviewing digital tools, software, and products to help brands reach tech-savvy audiences.",
-  },
-  {
-    id: 9,
-    icon: "UserCircle",
-    title: "Personal Branding Content Strategy",
-    description:
-      "Guiding clients on how to present themselves online through storytelling and consistent visual identity.",
-  },
-  {
-    id: 10,
-    icon: "Mic",
-    title: "Event Speaking",
-    description:
-      "Delivering talks on tech growth, self-development, and building consistency as a creative or student in tech.",
-  },
-  {
-    id: 11,
-    icon: "BookOpen",
-    title: "Workshops & Trainings",
-    description:
-      "Hosting interactive sessions on topics like learning in public, starting in tech, and personal branding for creators.",
-  },
+  id: 4,
+  icon: "Mic",
+  title: "Speaking & Workshops",
+  description:
+    "Delivering talks and interactive sessions on tech growth, self-development, personal branding, and building consistency as a creative or student in tech.",
+},
+{
+  id: 5,
+  icon: "UserCircle",
+  title: "Personal Branding & Content Strategy",
+  description:
+    "Helping clients craft a strong online presence through storytelling, consistent visuals, and strategic content planning.",
+}
+
 ],
 
 };

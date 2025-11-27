@@ -44,8 +44,8 @@ export const ServicesSection = () => {
                   <IconComponent name={service.icon} />
                 </div>
               </div>
-              <h3 className="text-lg font-semibold mb-2">{service.title}</h3>
-              <p className="text-gray-600 text-sm mb-3">{service.description}</p>
+              <h3 className="text-lg font-semibold">{service.title}</h3>
+              <p className="text-gray-600 mt-3">{service.description}</p>
             </div>
           ))}
         </div>

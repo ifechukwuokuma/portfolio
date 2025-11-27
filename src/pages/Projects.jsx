@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { ArrowUpRight, Github } from "lucide-react";
 import { fetchGitHubProjects } from "../components/Data/projects";
+import { Footer } from "../components/Layout/Footer";
 
 export const Projects = () => {
   const [projects, setProjects] = useState([]);
@@ -98,6 +99,7 @@ export const Projects = () => {
           ))
         )}
       </div>
+      <Footer/>
     </section>
   );
 };

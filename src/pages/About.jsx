@@ -1,150 +1,119 @@
-import { Linkedin, Instagram, Twitter, Github, Mail } from "lucide-react";
+import { Linkedin, Instagram, Twitter, Github, Mail, Rss } from "lucide-react";
 import profileImg from "../assets/img/okuma.jpeg"; // adjust path to your asset
+import { WorkExperience } from "../components/Sections/WorkExperience ";
+import { Footer } from "../components/Layout/Footer";
 
 export const About = () => {
-  // const awards = [
-  //   { year: 2023, title: "Outstanding Developer Award – Nigeria" },
-  //   { year: 2022, title: "Best Personal Branding Speaker – Tech Forum" },
-  //   { year: 2021, title: "Top 10 Emerging Developers – Africa" },
-  // ];
-
+  
   return (
-    <section className="py-16" id="about">
-      <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center gap-12">
-        {/* Left – Image */}
-        <div className="lg:w-1/2 flex justify-center">
-          <img
-            src={profileImg}
-            alt="Ifechukwu Okuma"
-            className="rounded-2xl max-w-[300px] w-full object-cover"
-          />
-        </div>
-
-        {/* Right – Content */}
-        <div className="lg:w-1/2 space-y-6">
-          <div className="md:text-left">
-            <p className="text-[#F9B233] font-semibold text-center">— About Me</p>
+    <section id="about">
+      <WorkExperience/>
+      <div className="text-center py-10">
+            <p className="text-[#F9B233] font-semibold">— About Me</p>
             <h2 className="text-3xl md:text-4xl font-bold text-black">
-              <span className="text-[#F9B233] italic">Let's get to</span> know each other
+              <span className="text-[#F9B233] italic">Let's get to</span> know each other.
             </h2>
           </div>
+      <div className="max-w-7xl mx-auto py-3 px-3 flex flex-col lg:flex-row items-center gap-12">
+  {/* Left – Image */}
+  <div className="lg:w-1/2 flex justify-center">
+    <img
+  src={profileImg}
+  alt="Ifechukwu Okuma"
+  className="rounded-2xl max-w-[350px] w-full object-cover"
+/>
+  </div>
 
-          <p className="text-black leading-relaxed">
-            I’m <span className="font-semibold text-gray-900">Ifechukwu Okuma</span>, a developer with a focus on{" "}
-            <span className="font-semibold text-gray-900">building practical solutions</span>{" "}
-            — from conversion-driven websites to simple tools that solve real problems.
-            <br />
-            I also have some knowledge of{" "}
-            <span className="font-semibold text-gray-900">UI/UX design</span>, 
-            which helps me visualize how my projects should look and feel before I start coding.
-            <br />
-            <br />
-            Beyond that, I’m passionate about content creation, speaking, software development, and writing. 
-            I love sharing ideas through{" "}
-            <span className="font-semibold text-gray-900">design, words, and code</span> — 
-            whether it’s <span className="font-semibold text-gray-900">a project, a story, or a message that inspires someone.</span>
-            <br />
-            <br />
-            For me, all these hobbies connect. They’re just different ways of expressing, telling stories, and creating impact.
-          </p>
+  {/* Right – Content */}
+  <div className="lg:w-1/2 space-y-6">
+<h2 className="text-black text-left font-extrabold text-3xl md:text-4xl">I’m Ifechukwu Okuma</h2>
+    <p className="text-black leading-relaxed md:text-left">
+      A developer focused on <span className="font-semibold text-gray-900"> building practical, user-ready solutions</span> — from conversion-driven websites to simple digital tools that make life easier.
+      <br />
+      I also work with <span className="font-semibold text-gray-900">UI/UX design</span> to shape how my projects should feel before I start building them.
+      <br />
+      Beyond tech, I create through <span className="font-semibold text-gray-900">content, speaking, and writing</span>. Whether it's a project, a story, or a message — I like turning ideas into something people can actually connect with.
+    </p>
 
-          {/* Focus Areas Badges */}
-          <div className="flex flex-wrap gap-3 mt-4">
-            <span className="px-3 py-1 rounded-full border text-gray-800 bg-gray-50">
-              Content Creation
-            </span>
-            <span className="px-3 py-1 rounded-full border text-gray-800 bg-gray-50">
-              Public Speaking
-            </span>
-            <span className="px-3 py-1 rounded-full border text-gray-800 bg-gray-50">
-              Software Development
-            </span>
-            <span className="px-3 py-1 rounded-full border text-gray-800 bg-gray-50">
-              Writing
-            </span>
-          </div>
+    {/* Focus Areas Badges */}
+    <div className="flex flex-wrap gap-3 mt-4">
+      <span className="px-3 py-1 rounded-full border text-gray-800 bg-gray-50">Content Creation</span>
+      <span className="px-3 py-1 rounded-full border text-gray-800 bg-gray-50">Public Speaking</span>
+      <span className="px-3 py-1 rounded-full border text-gray-800 bg-gray-50">Software Development</span>
+      <span className="px-3 py-1 rounded-full border text-gray-800 bg-gray-50">Writing</span>
+    </div>
 
-          {/* Social / Connect Section */}
-          <div className="mt-8 pt-4 border-t border-gray-200">
-            <p className="font-semibold mb-2 text-gray-800">Connect</p>
-            <div className="flex flex-wrap items-center gap-4">
-              <a
-                href="https://www.linkedin.com/in/ifechukwuokuma"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-gray-700 hover:text-[#F9B233] transition"
-                aria-label="LinkedIn"
-              >
-                <Linkedin size={20} />
-                <span className="text-sm">LinkedIn</span>
-              </a>
+    {/* Social / Connect Section */}
+    <div className="mt-8 pt-4 border-t border-gray-200">
+      <p className="font-semibold mb-2 text-gray-800">Connect</p>
+      <div className="flex flex-wrap items-center gap-4">
+        <a
+          href="https://www.linkedin.com/in/ifechukwuokuma"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 text-gray-700 hover:text-[#F9B233] transition"
+          aria-label="LinkedIn"
+        >
+          <Linkedin size={20} />
+          <span className="text-sm">LinkedIn</span>
+        </a>
 
-              <a
-                href="https://www.instagram.com/ifechukwuokuma"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-gray-700 hover:text-[#F9B233] transition"
-                aria-label="Instagram"
-              >
-                <Instagram size={20} />
-                <span className="text-sm">Instagram</span>
-              </a>
+        <a
+          href="https://www.instagram.com/ifechukwu.okuma"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 text-gray-700 hover:text-[#F9B233] transition"
+          aria-label="Instagram"
+        >
+          <Instagram size={20} />
+          <span className="text-sm">Instagram</span>
+        </a>
 
-              <a
-                href="https://github.com/ifechukwuokuma"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-gray-700 hover:text-[#F9B233] transition"
-                aria-label="GitHub"
-              >
-                <Github size={20} />
-                <span className="text-sm">GitHub</span>
-              </a>
+        <a
+          href="https://github.com/ifechukwuokuma"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 text-gray-700 hover:text-[#F9B233] transition"
+          aria-label="GitHub"
+        >
+          <Github size={20} />
+          <span className="text-sm">GitHub</span>
+        </a>
 
-              <a
-                href="mailto:helloifechukwuokuma@gmail.com"
-                className="flex items-center gap-2 text-gray-700 hover:text-[#F9B233] transition"
-                aria-label="Email"
-              >
-                <Mail size={20} />
-                <span className="text-sm">Email</span>
-              </a>
+        <a
+          href="mailto:helloifechukwuokuma@gmail.com"
+          className="flex items-center gap-2 text-gray-700 hover:text-[#F9B233] transition"
+          aria-label="Email"
+        >
+          <Mail size={20} />
+          <span className="text-sm">Email</span>
+        </a>
 
-              <a
-                href="https://www.x.com/IfechukwuOkuma"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-gray-700 hover:text-[#F9B233] transition"
-                aria-label="Twitter/X"
-              >
-                <Twitter size={20} />
-                <span className="text-sm">X / Twitter</span>
-              </a>
-            </div>
-          </div>
-        </div>
+        <a
+          href="https://www.x.com/IfechukwuOkuma"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 text-gray-700 hover:text-[#F9B233] transition"
+          aria-label="Twitter/X"
+        >
+          <Twitter size={20} />
+          <span className="text-sm">X / Twitter</span>
+        </a>
+        <a
+  href="https://ifechukwuokuma.substack.com/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex items-center gap-2 text-gray-700 hover:text-[#F9B233] transition"
+  aria-label="Substack"
+>
+  <Rss size={20} />
+  <span className="text-sm">Substack</span>
+</a>
       </div>
-
-      {/* Achievements / Awards Section 
-      <div className="mt-16 max-w-7xl mx-auto px-6">
-        <p className="text-sm text-[#F9B233] mb-2">— My Award-Winning Journey</p>
-        <h3 className="text-2xl md:text-3xl font-bold text-[#203B2E] mb-6">
-          Recognitions & Milestones
-        </h3>
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
-          {awards.map((award, idx) => (
-            <div
-              key={idx}
-              className="p-6 rounded-2xl border border-gray-200 text-center hover:shadow-lg transition"
-            >
-              <div className="text-5xl font-semibold text-[#F9B233] mb-2">
-                {award.year}
-              </div>
-              <p className="text-gray-700 font-medium">{award.title}</p>
-            </div>
-          ))}
-        </div>
-      </div>*/}
+    </div>
+  </div>
+</div>
+<Footer/>
     </section>
   );
 };
