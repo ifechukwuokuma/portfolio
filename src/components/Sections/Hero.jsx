@@ -11,7 +11,7 @@ import {
 export const Hero = () => {
   return (
     <main>
-  <section className="home-section flex items-center justify-center min-h-[70vh] py-7">
+  <section className="home-section flex items-center justify-center min-h-[55vh] py-6  md:py-3 lg:py-5">
     <div className="max-w-7xl w-full px-6 mx-auto">
       <div
         className="

@@ -56,7 +56,7 @@ export const WorkExperience = () => {
 
           <div className="mb-4">
             <h4 className="flex font-semibold text-[#F9B233] mb-2">Details:</h4>
-            <ul className="list-disc list-inside space-y-1 text-gray-300">
+            <ul className="gird text-start text-gray-300">
               {experiences[selected].details.map((detail, i) => (
                 <li className="flex" key={i}>• {detail}</li>
               ))}
