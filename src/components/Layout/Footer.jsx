@@ -1,4 +1,4 @@
-import { Linkedin, Instagram, Twitter } from "lucide-react";
+import { Linkedin, Instagram, Twitter ,Github} from "lucide-react";
 
 export const Footer = () => {
   return (
@@ -38,15 +38,9 @@ export const Footer = () => {
           >
             <Linkedin size={20} />
           </a>
-          <a
-            href="https://www.instagram.com/ifechukwu.okuma"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-700 hover:text-[#F9B233] transition"
-            aria-label="Instagram"
-          >
-            <Instagram size={20} />
-          </a>
+          <a href="https://github.com/ifechukwuokuma" target="_blank" rel="noreferrer">
+  <Github className="social-icons hover:text-gray-900" />
+</a>
           <a
             href="https://www.x.com/Ifechukwuokuma"
             target="_blank"
