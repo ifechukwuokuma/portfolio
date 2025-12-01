@@ -2,7 +2,7 @@ import "../../assets/Home.css";
 import profileImg from "../../assets/img/okuma.jpeg";
 import {
   Linkedin,
-  Instagram,
+  Github,
   Twitter,
   Briefcase,
   CalendarCheck,
@@ -42,12 +42,12 @@ export const Hero = () => {
             <Linkedin className="social-icons hover:text-[#0A66C2]" />
           </a>
           <a
-            href="https://www.instagram.com/ifechukwu.okuma"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Instagram className="social-icons hover:text-[#E4405F]" />
-          </a>
+  href="https://github.com/ifechukwuokuma"
+  target="_blank"
+  rel="noreferrer"
+>
+  <Github className="social-icons hover:text-gray-900" />
+</a>
           <a
             href="https://www.x.com/Ifechukwuokuma"
             target="_blank"
@@ -146,7 +146,14 @@ export const Hero = () => {
             loading="lazy"
             className="rounded-2xl max-w-[300px] mx-auto"
           />
-          {/* Social Icons */} <div className=" lg:hidden flex justify-center items-center gap-2 mt-4 order-3 md:order-3 :vertical lg:order-1 flex-row lg:flex-col " > <a href="https://www.linkedin.com/in/ifechukwuokuma" target="_blank" rel="noreferrer" > <Linkedin className="social-icons hover:text-[#0A66C2]" /> </a> <a href="https://www.instagram.com/ifechukwuokuma" target="_blank" rel="noreferrer" > <Instagram className="social-icons hover:text-[#E4405F]" /> </a> <a href="https://www.x.com/Ifechukwuokuma" target="_blank" rel="noreferrer" > <Twitter className="social-icons hover:text-[#1DA1F2]" /> </a> </div>
+          {/* Social Icons */} 
+          <div className=" lg:hidden flex justify-center items-center gap-2 mt-4 order-3 md:order-3 :vertical lg:order-1 flex-row lg:flex-col " > 
+            <a href="https://www.linkedin.com/in/ifechukwuokuma" target="_blank" rel="noreferrer" > <Linkedin className="social-icons hover:text-[#0A66C2]" /> </a> 
+          <a href="https://github.com/ifechukwuokuma" target="_blank" rel="noreferrer">
+  <Github className="social-icons hover:text-gray-900" />
+</a>
+          <a href="https://www.x.com/Ifechukwuokuma" target="_blank" rel="noreferrer" > <Twitter className="social-icons hover:text-[#1DA1F2]" /> </a> 
+          </div>
         </div>
       </div>
     </div>

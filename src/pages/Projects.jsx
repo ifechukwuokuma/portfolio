@@ -41,15 +41,16 @@ export const Projects = () => {
             </h2>
           </div>
 
-          {/* Button */}
           <a
-            href="https://wa.me/2348024233790?text=Hi%20Ifechukwu%2C%20I'm%20coming%20from%20your%20website.%20I%20want%20to%20book%20a%20call%20to%20discuss%20a%20project%20in%20mind."
-            target="_blank"
-            rel="noreferrer"
-            className="bg-black text-white px-6 py-3 rounded-full flex items-center gap-2 hover:bg-[#F9B233] hover:text-black transition"
-          >
-            Let Talk
-          </a>
+  href="https://github.com/ifechukwuokuma?tab=repositories"
+  target="_blank"
+  rel="noreferrer"
+  className="bg-black text-white px-6 py-3 rounded-full flex items-center gap-2 hover:bg-[#F9B233] hover:text-black transition"
+>
+  <Github size={18} />
+ View GitHub
+</a>
+
         </div>
       </div>
 

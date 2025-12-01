@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { ArrowUpRight, Github } from "lucide-react";
+import { ArrowUpRight, Github , ArrowRight} from "lucide-react";
 import { fetchGitHubProjects } from "../Data/projects";
 
 export const ProjectsSection = () => {
@@ -46,7 +46,7 @@ export const ProjectsSection = () => {
             rel="noreferrer"
             className="bg-black text-white px-6 py-3 rounded-full flex items-center gap-2 hover:bg-[#F9B233] hover:text-black transition"
           >
-            Let Talk
+            View All Projects <ArrowRight size={18} />
           </a>
         </div>
       </div>

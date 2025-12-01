@@ -1,4 +1,4 @@
-import { Linkedin, Instagram, Twitter, Github, Mail, Rss } from "lucide-react";
+import { Linkedin, Instagram, Twitter, Github,Rss } from "lucide-react";
 import profileImg from "../assets/img/okuma.jpeg"; // adjust path to your asset
 import { WorkExperience } from "../components/Sections/WorkExperience ";
 import { Footer } from "../components/Layout/Footer";
@@ -78,15 +78,6 @@ export const About = () => {
         >
           <Github size={20} />
           <span className="text-sm">GitHub</span>
-        </a>
-
-        <a
-          href="mailto:helloifechukwuokuma@gmail.com"
-          className="flex items-center gap-2 text-gray-700 hover:text-[#F9B233] transition"
-          aria-label="Email"
-        >
-          <Mail size={20} />
-          <span className="text-sm">Email</span>
         </a>
 
         <a
