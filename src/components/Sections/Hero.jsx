@@ -11,8 +11,8 @@ import {
 export const Hero = () => {
   return (
     <main>
- <section className="py-16 bg-white">
-      <div className="container mx-auto px-4">
+ <section className="home-section flex items-center justify-center py-6">
+  <div className="w-full px-6 mx-auto">
     <div className="
       flex flex-col 
       lg:flex-row 
