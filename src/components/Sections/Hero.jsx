@@ -11,18 +11,15 @@ import {
 export const Hero = () => {
   return (
     <main>
-  <section className="home-section flex items-center justify-center min-h-[55vh] py-6  md:py-3 lg:py-5">
-    <div className="max-w-7xl w-full px-6 mx-auto">
-      <div
-        className="
-          flex flex-col 
-          lg:flex-row 
-          items-center 
-          justify-between 
-          gap-5
-          md:flex-row md:items-center md:justify-between
-        "
-      >
+ <section className="home-section flex items-center justify-center py-6 md:py-10">
+  <div className="max-w-7xl w-full px-6 mx-auto">
+    <div className="
+      flex flex-col 
+      lg:flex-row 
+      items-center 
+      justify-between 
+      gap-6
+    ">
         {/* ===== Social Icons (Left - Laptop only) ===== */}
         <div
           className="
@@ -58,15 +55,8 @@ export const Hero = () => {
         </div>
 
         {/* ===== Text Section (Middle) ===== */}
-        <div
-          className="
-            w-full lg:w-6/12
-            order-2
-            justify-center
-            space-y-4
-            text-center lg:text-left
-          "
-        >
+       <div className="w-full lg:w-6/12 order-2 space-y-2 text-center lg:text-left">
+
           {/* Label */}
           <div className="inline-flex items-center gap-2 bg-[#F9B233]/20 text-black font-medium px-4 py-1 rounded-full border border-[#F9B233] mx-auto lg:mx-0">
             <svg
@@ -109,7 +99,8 @@ export const Hero = () => {
           </p>
 
           {/* Action Buttons */}
-          <div className="flex flex-wrap gap-4 justify-center lg:justify-start mt-6">
+         <div className="flex flex-wrap gap-3 justify-center lg:justify-start mt-3">
+
             <a
               href="/projects"
               className="bg-black text-white px-5 py-2.5 rounded-full flex items-center gap-2 hover:bg-[#F9B233] hover:text-white transition shadow-sm"
