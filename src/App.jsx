@@ -7,15 +7,19 @@ import { Projects } from "./pages/Projects";
 import { NotFound } from "./pages/NotFound";
 import { About } from "./pages/About";
 
+import ScrollToTop from "./ScrollToTop";  // ← add this
+
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />   {/* ← add this */}
       <Navbar />
+
       <Routes>
         <Route index element={<Home />} />
-        <Route path="/about" element={<About/>} />
-        <Route path="/services" element={<Services/>} />
-        <Route path="/projects" element={<Projects/>} />
+        <Route path="/about" element={<About />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

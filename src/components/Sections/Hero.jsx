@@ -19,7 +19,7 @@ export const Hero = () => {
           lg:flex-row 
           items-center 
           justify-between 
-          gap-10
+          gap-5
           md:flex-row md:items-center md:justify-between
         "
       >
