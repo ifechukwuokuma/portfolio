@@ -24,29 +24,4 @@ export const servicesData = {
 }
   ],
 
-  beyondTech: [
-  {
-  id: 3,
-  icon: "Video",
-  title: "UGC, Brand & Product Videos",
-  description:
-    "Creating authentic short-form videos and reviewing tech products to align with brand voice, engage audiences, and showcase offerings effectively.",
-},
-  {
-  id: 4,
-  icon: "Mic",
-  title: "Speaking & Workshops",
-  description:
-    "Delivering talks and interactive sessions on tech growth, self-development, personal branding, and building consistency as a creative or student in tech.",
-},
-{
-  id: 5,
-  icon: "UserCircle",
-  title: "Personal Branding & Content Strategy",
-  description:
-    "Helping clients craft a strong online presence through storytelling, consistent visuals, and strategic content planning.",
-}
-
-],
-
 };

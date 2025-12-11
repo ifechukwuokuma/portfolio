@@ -14,7 +14,7 @@ const IconComponent = ({ name, color = "#F9B233", size = 22 }) => {
 };
 
 export const Services = () => {
-  const { webServices, beyondTech } = servicesData;
+  const { webServices} = servicesData;
 
   return (
     <main className="text-black">
@@ -87,42 +87,6 @@ export const Services = () => {
               View Projects <ArrowRight size={16} />
             </NavLink>
           </div>
-        </div>
-      </section>
-
-      {/* Beyond Tech section */}
-      <section className="max-w-7xl mx-auto px-6 py-12">
-        <div className="flex flex-col md:flex-row justify-between items-center md:items-end gap-4">
-          <div className="text-center md:text-left">
-            <p className="text-[#F9B233] font-semibold">— Services</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-black">
-              <span className="text-[#F9B233] italic">Beyond </span> Tech
-            </h2>
-          </div>
-
-          <a
-            href="https://wa.me/2348024233790?text=Hi%20Ifechukwu%2C%20I'm%20coming%20from%20your%20website.%20I%20want%20to%20book%20a%20call%20to%20discuss%20a%20project%20in%20mind."
-              target="_blank"
-              rel="noreferrer"
-            className="bg-black text-white px-6 py-3 rounded-full flex items-center gap-2 hover:bg-[#F9B233] hover:text-black transition"
-          >Let Talk
-          </a>
-        </div>
-        <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
-          {beyondTech.map((b, idx) => (
-            <div
-              key={idx}
-              className="p-6 rounded-2xl bg-[#FBFCFD] shadow-sm hover:shadow-md transition"
-            >
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-lg bg-[#F9B233]/10 flex items-center justify-center">
-                  <IconComponent name={b.icon} />
-                </div>
-                <h3 className="text-lg font-semibold">{b.title}</h3>
-              </div>
-              <p className="text-gray-600 mt-3">{b.description}</p>
-            </div>
-          ))}
         </div>
       </section>
 

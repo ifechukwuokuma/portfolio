@@ -21,7 +21,6 @@ export const AboutSection = () => {
             "Frontend Developer",
             "Backend Developer",
             "Software Developer",
-            "Speaker",
           ].map((tag, index) => (
             <span
               key={index}

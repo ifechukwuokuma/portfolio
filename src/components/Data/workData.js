@@ -1,45 +1,24 @@
 export const workData = [
   {
-    title: "Full Stack Intern",
-    company: "Blowbits Solutions LLP",
-    duration: "Jun, 2024 – Aug, 2024",
+    title: "Junior Software Developer Intern",
+    company: "Edu Machine Academy",
+    duration: "Aug, 2025 – Oct, 2025 (Hybrid)",
     details: [
-      "Built dynamic web interfaces using JavaScript & React, and created server-side applications with C#.",
-      "Automated tasks on Linux systems with Bourne Shell scripting.",
-      "Managed PostgreSQL and implemented Redis for caching.",
-      "Implemented email systems, developed REST APIs for campaign management.",
-      "Authored automation scripts for web application testing using Puppeteer.",
-      "Created a C# .NET program for transaction data processing and reconciliation."
+      "Contributed to internal tools and web applications supporting business operations.",
+      "Performed product testing and identified UI/UX and functional issues across the platform.",
+      "Documented bugs clearly and collaborated closely with developers to ensure quick resolutions.",
+      "Participated in software development tasks using JavaScript and Python.",
+      "Assisted in backend-related tasks while learning real-world development workflows from planning to deployment.",
+      "Worked in a collaborative environment to build production-ready features."
     ],
-    projects: ["Nano GST", "Octa GST"],
-    technologies: [
-      { name: "React", icon: "Layers" },
-      { name: "Node.js", icon: "Server" },
-      { name: "C#", icon: "Code2" },
-      { name: "PostgreSQL", icon: "Database" },
-      { name: "Python", icon: "Terminal" },
-      { name: "AWS", icon: "Cloud" },
-      { name: ".NET", icon: "Cpu" },
-      { name: "TypeScript", icon: "Braces" }
-    ]
-  },
-  {
-  title: "Full Stack Intern",
-  company: "Blowbits Solutions LLP",
-  duration: "Jun, 2024 – Aug, 2024",
-  details: [
-    "Developed responsive web pages using React and Tailwind CSS.",
-    "Integrated REST APIs and managed state using Redux.",
-    "Optimized website performance and SEO."
-  ],
-  projects: ["Project Alpha", "Project Beta"],
+    projects: ["Mobile App User Testing", "Web App (Music Upload Platform)"],
   technologies: [
-    { name: "React", icon: "Layers" },
-    { name: "Tailwind CSS", icon: "Palette" },
     { name: "JavaScript", icon: "Braces" },
-    { name: "Redux", icon: "Code2" },
-    { name: "VS Code", icon: "FileCode2" }
+    { name: "React", icon: "Layers" },
+    { name: "CSS", icon: "Palette" },
+    { name: "API Testing", icon: "CheckCircle" }
   ]
-}
+  },
+
   // Add more experiences here
 ];
