@@ -83,14 +83,15 @@ export const ProjectsSection = () => {
                   >
                     View Repo <Github size={18} />
                   </a>
-                  <a
+                  {proj.liveUrl && (
+                    <a
                     href={proj.liveUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-yellow-600 font-medium hover:underline"
                   >
                     View Project <ArrowUpRight size={18} />
-                  </a>
+                    </a>)}
                 </div>
               </div>
             </div>

@@ -42,7 +42,8 @@ export const fetchGitHubProjects = async () => {
               const textLines = decoded
                 .split("\n")
                 .map(line => line.trim()) // trim whitespace
-                .filter(line => line && !line.startsWith("#") && !line.startsWith("!") && !line.startsWith("[") && !line.startsWith("<")); // Remove Markdown and HTML elements
+                .map(line => line.startsWith("#") ? line.replace(/^#+\s*/, "") : line)
+.filter(line => line && !line.startsWith("!") && !line.startsWith("[") && !line.startsWith("<")); // Remove Markdown and HTML elements
 
               description = textLines.join(" ") || "No description provided.";
             }
@@ -64,7 +65,7 @@ export const fetchGitHubProjects = async () => {
           stars: repo.stargazers_count,
           branch: repo.default_branch,
           repoUrl: repo.html_url,
-          liveUrl: `https://ifechukwuokuma.github.io/${repo.name}`,
+          liveUrl: repo.homepage || `https://ifechukwuokuma.github.io/${repo.name}`,
           thumbnail: thumbnail || "/fallback-thumbnail.png", // fallback if no image found
         };
       })
