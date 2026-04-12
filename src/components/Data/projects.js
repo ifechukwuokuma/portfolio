@@ -40,10 +40,10 @@ export const fetchGitHubProjects = async () => {
             // 📝 Description fallback - Only capture text content, ignoring markdown formatting
             if (!description) {
               const textLines = decoded
-                .split("\n")
-                .map(line => line.trim()) // trim whitespace
-                .map(line => line.startsWith("#") ? line.replace(/^#+\s*/, "") : line)
-.filter(line => line && !line.startsWith("!") && !line.startsWith("[") && !line.startsWith("<")); // Remove Markdown and HTML elements
+  .split("\n")
+  .map(line => line.trim())
+  .filter(line => line && !line.startsWith("#") && !line.startsWith("!") && !line.startsWith("[") && !line.startsWith("<"))
+  .map(line => line.replace(/[*_`]/g, "")); // Remove Markdown and HTML elements
 
               description = textLines.join(" ") || "No description provided.";
             }
