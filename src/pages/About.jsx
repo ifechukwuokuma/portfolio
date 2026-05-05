@@ -4,7 +4,7 @@ import { Footer } from "../components/Sections/Footer";
 
 export const About = () => {
   return (
-    <section className="py-10 min-h-screen bg-white dark:bg-[#0f0f0f] transition-colors duration-300" id="about">
+    <section className="py-10 min-h-screen" id="about">
       <div className="max-w-6xl mx-auto px-6">
         
         <div className="flex flex-col lg:flex-row items-center gap-16">
