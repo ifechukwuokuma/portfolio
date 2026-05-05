@@ -1,113 +1,52 @@
-import { Phone, Mail, MapPin, Send } from "lucide-react";
+import { Mail, MapPin, Linkedin, Github, Twitter } from "lucide-react";
 
 export const ContactSection = () => {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    const name = e.target.name.value;
-    const email = e.target.email.value;
-    const message = e.target.message.value;
-
-    const whatsappNumber = "2348024233790"; // same structure you used
-    const url = `https://wa.me/${whatsappNumber}?text=Hello,%20my%20name%20is%20${encodeURIComponent(
-      name
-    )}.%0AEmail:%20${encodeURIComponent(email)}%0A%0A${encodeURIComponent(
-      message
-    )}`;
-
-    window.open(url, "_blank");
-  };
-
   return (
-    <section className="py-16" id="contact">
-      <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12">
-        {/* Left Column - Contact Info */}
-        <div>
-          <p className="text-[#F9B233] font-semibold">— Contact Me</p>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 leading-snug">
-            Let’s Talk for{" "}
-            <span className="text-[#F9B233] italic">Your Next Projects</span>
-          </h2>
-          <p className="text-black mb-8">
-            Have a project in mind? Share the details below or connect with me
-            directly.
-          </p>
+    <section className="py-16 text-center" id="contact">
+      <div className="max-w-2xl mx-auto px-6">
+        <p className="text-[#F9B233] font-semibold">— Contact Me</p>
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 leading-snug">
+          Let's Work{" "}
+          <span className="text-[#F9B233] italic">Together</span>
+        </h2>
+        <p className="text-gray-600 mb-10">
+          I'm currently open to internship opportunities. If you think I'd be a good fit for your team, I'd love to hear from you.
+        </p>
 
-          <ul className="space-y-5 text-gray-700">
-            <li className="flex items-center gap-3">
-              <div className="bg-[#F9B233]/20 text-black p-3 rounded-full">
-                <Phone size={20} />
-              </div>
-              <span>+234 802 423 3790</span>
-            </li>
+        <ul className="space-y-4 text-gray-700 mb-10">
+          <li className="flex items-center justify-center gap-3">
+            <div className="bg-[#F9B233]/20 text-black p-3 rounded-full">
+              <Mail size={20} />
+            </div>
+            <span>helloifechukwuokuma@gmail.com</span>
+          </li>
+          <li className="flex items-center justify-center gap-3">
+            <div className="bg-[#F9B233]/20 text-black p-3 rounded-full">
+              <MapPin size={20} />
+            </div>
+            <span>Lagos, Nigeria</span>
+          </li>
+        </ul>
 
-            <li className="flex items-center gap-3">
-              <div className="bg-[#F9B233]/20 text-black p-3 rounded-full">
-                <Mail size={20} />
-              </div>
-              <span>helloifechukwuokuma@gmail.com</span>
-            </li>
-
-            <li className="flex items-center gap-3">
-              <div className="bg-[#F9B233]/20 text-black p-3 rounded-full">
-                <MapPin size={20} />
-              </div>
-              <span>Lagos, Nigeria</span>
-            </li>
-          </ul>
-        </div>
-
-        {/* Right Column - WhatsApp Form */}
-        <form
-          onSubmit={handleSubmit}
-          className="bg-gray-50 p-8 rounded-2xl shadow-sm space-y-6"
+        <a
+          href="mailto:helloifechukwuokuma@gmail.com"
+          className="inline-flex items-center gap-2 bg-black text-white px-8 py-3 rounded-full font-medium hover:bg-[#F9B233] hover:text-black transition"
         >
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
-              Name
-            </label>
-            <input
-              type="text"
-              name="name"
-              required
-              placeholder="Your name"
-              className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-[#F9B233] focus:outline-none"
-            />
-          </div>
+          <Mail size={18} />
+          Email Me
+        </a>
 
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
-              Email
-            </label>
-            <input
-              type="email"
-              name="email"
-              required
-              placeholder="you@example.com"
-              className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-[#F9B233] focus:outline-none"
-            />
-          </div>
-
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
-              Message
-            </label>
-            <textarea
-              name="message"
-              required
-              rows="4"
-              placeholder="Tell me about your project..."
-              className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-[#F9B233] focus:outline-none resize-none"
-            ></textarea>
-          </div>
-
-          <button
-            type="submit"
-            className="flex items-center justify-center gap-2 bg-black text-white px-6 py-3 rounded-full font-medium hover:bg-[#F9B233] hover:text-black transition"
-          >
-            Submit <Send size={18} />
-          </button>
-        </form>
+        <div className="flex justify-center gap-5 mt-10">
+          <a href="https://www.linkedin.com/in/ifechukwuokuma" target="_blank" rel="noreferrer" className="text-gray-500 hover:text-[#0A66C2] transition">
+            <Linkedin size={22} />
+          </a>
+          <a href="https://github.com/ifechukwuokuma" target="_blank" rel="noreferrer" className="text-gray-500 hover:text-gray-900 transition">
+            <Github size={22} />
+          </a>
+          <a href="https://www.x.com/Ifechukwuokuma" target="_blank" rel="noreferrer" className="text-gray-500 hover:text-[#1DA1F2] transition">
+            <Twitter size={22} />
+          </a>
+        </div>
       </div>
     </section>
   );

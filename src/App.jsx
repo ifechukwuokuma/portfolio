@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Navbar } from "./components/Layout/Navbar";
+import { Navbar } from "./components/Sections/Navbar";
 import { Home } from "./pages/Home";
-import { Services } from "./pages/Services";
-import { Contact } from "./pages/Contact";
+import { Insights } from "./pages/Insights";
+import { InsightDetail } from "./pages/InsightDetail";
 import { Projects } from "./pages/Projects";
 import { NotFound } from "./pages/NotFound";
 import { About } from "./pages/About";
@@ -18,9 +18,9 @@ function App() {
       <Routes>
         <Route index element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/services" element={<Services />} />
         <Route path="/projects" element={<Projects />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/insights" element={<Insights />} />
+        <Route path="/insights/:slug" element={<InsightDetail />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>

@@ -1,110 +1,73 @@
-import { Linkedin, Instagram, Twitter, Github,Rss } from "lucide-react";
-import profileImg from "../assets/img/okuma.jpeg"; // adjust path to your asset
-import { WorkExperience } from "../components/Sections/WorkExperience ";
-import { Footer } from "../components/Layout/Footer";
+import { Linkedin, Twitter, Github } from "lucide-react";
+import profileImg from "../assets/img/okuma.png";
+import { Footer } from "../components/Sections/Footer";
 
 export const About = () => {
-  
   return (
-    <section id="about">
-      <WorkExperience/>
-      <div className="text-center py-10">
-            <p className="text-[#F9B233] font-semibold">— About Me</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-black">
-              <span className="text-[#F9B233] italic">Let's get to</span> know each other.
-            </h2>
+    <section className="py-10 min-h-screen bg-white dark:bg-[#0f0f0f] transition-colors duration-300" id="about">
+      <div className="max-w-6xl mx-auto px-6">
+        
+        <div className="flex flex-col lg:flex-row items-center gap-16">
+          
+          {/* Left – Image with Offset Frame Aesthetic */}
+          <div className="lg:w-5/12 relative group">
+            {/* The decorative "wireframe" backgrounds from the reference image */}
+            <div className="absolute -inset-4 border border-[#F9B233]/30 rounded-2xl rotate-3 group-hover:rotate-0 transition-transform duration-500"></div>
+            <div className="absolute -inset-4 border border-gray-200 dark:border-gray-800 rounded-2xl -rotate-3 group-hover:rotate-0 transition-transform duration-500"></div>
+            
+            <div className="relative z-10">
+              <img
+                src={profileImg}
+                alt="Ifechukwu Okuma"
+                className="rounded-xl w-full aspect-[4/5] object-cover grayscale hover:grayscale-0 transition duration-700 shadow-2xl"
+              />
+              
+              {/* Floating Stat Box like in image (4).jpg */}
+              <div className="absolute -bottom-6 -right-6 bg-white dark:bg-[#1a1a1a] border border-gray-200 dark:border-gray-700 p-5 rounded-xl shadow-xl">
+                <p className="text-[#F9B233] text-3xl font-bold leading-none">2026</p>
+                <p className="text-gray-500 dark:text-gray-400 text-[10px] uppercase tracking-widest mt-1 font-semibold">CS Candidate • UI</p>
+              </div>
+            </div>
           </div>
-      <div className="max-w-7xl mx-auto py-3 px-3 flex flex-col lg:flex-row items-center gap-12">
-  {/* Left – Image */}
-  <div className="lg:w-1/2 flex justify-center">
-    <img
-  src={profileImg}
-  alt="Ifechukwu Okuma"
-  className="rounded-2xl max-w-[350px] w-full object-cover"
-/>
+
+          {/* Right – Content Area */}
+          <div className="lg:w-7/12 space-y-8">
+  <div className="space-y-2">
+    <p className="text-[#F9B233] font-medium tracking-[0.2em] uppercase text-sm">— About Me</p>
+    <h2 className="text-4xl md:text-6xl font-serif font-bold text-gray-900 dark:text-white leading-tight">
+      I turn ideas into <span className="text-[#F9B233] italic">interfaces</span> that people actually enjoy.
+    </h2>
   </div>
 
-  {/* Right – Content */}
-  <div className="lg:w-1/2 space-y-6">
-<h2 className="text-black text-left font-extrabold text-3xl md:text-4xl">I’m Ifechukwu Okuma</h2>
-    <p className="text-black leading-relaxed md:text-left">
-      A developer focused on <span className="font-semibold text-gray-900"> building practical, user-ready solutions</span> — from conversion-driven websites to simple digital tools that make life easier.
-      <br />
-      I also work with <span className="font-semibold text-gray-900">UI/UX design</span> to shape how my projects should feel before I start building them.
-      <br />
-      Beyond tech, I create through <span className="font-semibold text-gray-900">content, speaking, and writing</span>. Whether it's a project, a story, or a message — I like turning ideas into something people can actually connect with.
+  <div className="space-y-6 text-lg text-gray-600 dark:text-gray-300 leading-relaxed font-light">
+    <p>
+      I’m a <span className="font-medium text-gray-900 dark:text-white">Frontend Developer</span> and Computer Science student. I focus on building practical, user-ready solutions, from conversion-driven websites to simple digital tools that make everyday tasks easier.
+    </p>
+    
+    <p>
+      I work with <span className="text-gray-900 dark:text-white underline decoration-[#F9B233] decoration-2 underline-offset-4">UI/UX design</span> to shape how my projects should feel before I start building, ensuring that what I create is not just functional, but intuitive and easy to use.
     </p>
 
-    {/* Focus Areas Badges */}
-    <div className="flex flex-wrap gap-3 mt-4">
-      <span className="px-3 py-1 rounded-full border text-gray-800 bg-gray-50">Content Creation</span>
-      <span className="px-3 py-1 rounded-full border text-gray-800 bg-gray-50">Public Speaking</span>
-      <span className="px-3 py-1 rounded-full border text-gray-800 bg-gray-50">Software Development</span>
-      <span className="px-3 py-1 rounded-full border text-gray-800 bg-gray-50">Writing</span>
-    </div>
+    <p>
+      Beyond development, I create through content, speaking, and writing. Whether it is a product, an idea, or a message, I focus on turning it into something people can understand and connect with.
+    </p>
+  </div>
 
-    {/* Social / Connect Section */}
-    <div className="mt-8 pt-4 border-t border-gray-200">
-      <p className="font-semibold mb-2 text-gray-800">Connect</p>
-      <div className="flex flex-wrap items-center gap-4">
-        <a
-          href="https://www.linkedin.com/in/ifechukwuokuma"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-2 text-gray-700 hover:text-[#F9B233] transition"
-          aria-label="LinkedIn"
-        >
-          <Linkedin size={20} />
-          <span className="text-sm">LinkedIn</span>
-        </a>
-
-        <a
-          href="https://www.instagram.com/ifechukwu.okuma"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-2 text-gray-700 hover:text-[#F9B233] transition"
-          aria-label="Instagram"
-        >
-          <Instagram size={20} />
-          <span className="text-sm">Instagram</span>
-        </a>
-
-        <a
-          href="https://github.com/ifechukwuokuma"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-2 text-gray-700 hover:text-[#F9B233] transition"
-          aria-label="GitHub"
-        >
-          <Github size={20} />
-          <span className="text-sm">GitHub</span>
-        </a>
-
-        <a
-          href="https://www.x.com/IfechukwuOkuma"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-2 text-gray-700 hover:text-[#F9B233] transition"
-          aria-label="Twitter/X"
-        >
-          <Twitter size={20} />
-          <span className="text-sm">X / Twitter</span>
-        </a>
-        <a
-  href="https://ifechukwuokuma.substack.com/"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="flex items-center gap-2 text-gray-700 hover:text-[#F9B233] transition"
-  aria-label="Substack"
->
-  <Rss size={20} />
-  <span className="text-sm">Substack</span>
-</a>
-      </div>
-    </div>
+  {/* Focus Areas Badges */}
+  <div className="flex flex-wrap gap-2">
+    {["Software Architecture", "UI/UX Design", "Technical Writing", "SaaS Development"].map((skill) => (
+      <span key={skill} className="px-4 py-1.5 rounded-full border border-gray-200 dark:border-gray-800 text-xs font-medium text-gray-500 dark:text-gray-400 bg-gray-50/50 dark:bg-gray-900/50">
+        {skill}
+      </span>
+    ))}
   </div>
 </div>
-<Footer/>
+
+
+
+        </div>
+      </div>
+      <Footer />
     </section>
   );
 };

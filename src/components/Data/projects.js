@@ -13,6 +13,7 @@ export const fetchGitHubProjects = async () => {
       starredRepos.map(async (repo) => {
         let description = repo.description || "";
         let thumbnail = "";
+        let languages = [];
 
         try {
           // Fetch README
@@ -25,11 +26,10 @@ export const fetchGitHubProjects = async () => {
             const decoded = decodeURIComponent(escape(atob(readmeData.content)));
 
             // 🔍 Extract the first image from the README (Markdown format)
-            const imgMatch = decoded.match(/!\[.*?\]\(([^)]+)\)/); // Match Markdown image syntax
+            const imgMatch = decoded.match(/!\[.*?\]\(([^)]+)\)/);
             if (imgMatch && imgMatch[1]) {
-              let imgUrl = imgMatch[1].trim(); // Extract image URL
+              let imgUrl = imgMatch[1].trim();
 
-              // Handle relative paths by converting them to absolute URLs
               if (!imgUrl.startsWith("http")) {
                 imgUrl = `https://raw.githubusercontent.com/ifechukwuokuma/${repo.name}/${repo.default_branch}/${imgUrl.replace(/^\.?\//, "")}`;
               }
@@ -37,18 +37,18 @@ export const fetchGitHubProjects = async () => {
               thumbnail = imgUrl;
             }
 
-            // 📝 Description fallback - Only capture text content, ignoring markdown formatting
+            // 📝 Description fallback
             if (!description) {
               const textLines = decoded
-  .split("\n")
-  .map(line => line.trim())
-  .filter(line => line && !line.startsWith("#") && !line.startsWith("!") && !line.startsWith("[") && !line.startsWith("<"))
-  .map(line => line.replace(/[*_`]/g, "")); // Remove Markdown and HTML elements
+                .split("\n")
+                .map(line => line.trim())
+                .filter(line => line && !line.startsWith("#") && !line.startsWith("!") && !line.startsWith("[") && !line.startsWith("<"))
+                .map(line => line.replace(/[*_`]/g, ""));
 
               description = textLines.join(" ") || "No description provided.";
             }
 
-            // Truncate the description to a specific length
+            // Truncate the description
             const maxLength = 250;
             if (description.length > maxLength) {
               description = description.slice(0, maxLength) + "...";
@@ -56,6 +56,19 @@ export const fetchGitHubProjects = async () => {
           }
         } catch (err) {
           console.error(`Error fetching README for ${repo.name}:`, err);
+        }
+
+        // Fetch languages
+        try {
+          const langsRes = await fetch(
+            `https://api.github.com/repos/ifechukwuokuma/${repo.name}/languages`
+          );
+          if (langsRes.ok) {
+            const langsData = await langsRes.json();
+            languages = Object.keys(langsData);
+          }
+        } catch (err) {
+          console.error(`Error fetching languages for ${repo.name}:`, err);
         }
 
         return {
@@ -66,7 +79,9 @@ export const fetchGitHubProjects = async () => {
           branch: repo.default_branch,
           repoUrl: repo.html_url,
           liveUrl: repo.homepage || `https://ifechukwuokuma.github.io/${repo.name}`,
-          thumbnail: thumbnail || "/fallback-thumbnail.png", // fallback if no image found
+          thumbnail: thumbnail || "/fallback-thumbnail.png",
+          status: repo.pushed_at,
+          languages,
         };
       })
     );

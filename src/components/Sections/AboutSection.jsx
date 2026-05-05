@@ -1,4 +1,4 @@
-import profileImg from "../../assets/img/okuma.jpeg"; 
+import profileImg from "../../assets/img/okuma.png"; 
 import { ArrowRight, Download } from "lucide-react";
 
 export const AboutSection = () => {
