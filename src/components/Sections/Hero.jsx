@@ -33,15 +33,15 @@ export const Hero = () => {
 
   return (
     <main>
-      <section className="flex items-center justify-center py-5 min-h-[90vh]">
+      <section className="flex items-center justify-center py-5 md:py-5 min-h-fit md:min-h-[60vh] lg:min-h-[90vh]">
         <div className="max-w-7xl w-full px-6 mx-auto">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-10">
 
             {/* ===== Left: Text ===== */}
-            <div className="w-full lg:w-6/12 space-y-5  lg:text-left order-2 lg:order-1">
+            <div className="w-full lg:w-6/12 space-y-5 text-center md:text-left lg:text-left order-2 lg:order-1">
 
               {/* Big Name */}
-              <h1 className="text-5xl md:text-6xl xl:text-7xl font-black text-black dark:text-white leading-tight tracking-tight">
+              <h1 className="text-5xl md:text-6xl xl:text-7xl font-black text-black dark:text-white leading-tight tracking-tight md:text-center lg:text-start">
                 Ifechukwu<br />
                 <span className="text-[#F9B233]">Okuma.</span>
               </h1>
@@ -98,7 +98,7 @@ export const Hero = () => {
             </div>
 
             {/* ===== Right: Photo + Widget ===== */}
-            <div className="w-full lg:w-5/12 order-1 lg:order-2 flex flex-col items-center">
+            <div className="w-full lg:w-5/12 order-1 lg:order-2 flex flex-col items-center lg:flex md:hidden">
               <div className="relative w-full max-w-[420px]">
                 <img
                   src={profileImg}

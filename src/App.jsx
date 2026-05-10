@@ -12,17 +12,20 @@ import ScrollToTop from "./ScrollToTop";  // ← add this
 function App() {
   return (
     <BrowserRouter>
-      <ScrollToTop />   {/* ← add this */}
-      <Navbar />
-
-      <Routes>
-        <Route index element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/insights" element={<Insights />} />
-        <Route path="/insights/:slug" element={<InsightDetail />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+      <ScrollToTop />
+      <div className="flex flex-col min-h-screen">
+        <Navbar />
+        <div className="flex-1">
+          <Routes>
+            <Route index element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/insights" element={<Insights />} />
+            <Route path="/insights/:slug" element={<InsightDetail />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </div>
+      </div>
     </BrowserRouter>
   );
 }
