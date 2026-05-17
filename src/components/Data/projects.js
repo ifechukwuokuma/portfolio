@@ -49,9 +49,9 @@ export const fetchGitHubProjects = async () => {
             }
 
             // Truncate the description
-            const maxLength = 250;
+            const maxLength = 188;
             if (description.length > maxLength) {
-              description = description.slice(0, maxLength) + "...";
+              description = description.slice(0, maxLength);
             }
           }
         } catch (err) {
