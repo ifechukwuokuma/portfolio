@@ -52,7 +52,7 @@ export const Hero = () => {
                   Frontend Developer
                 </span>
                 <span className="border border-gray-400 dark:border-gray-600 text-gray-700 dark:text-gray-300 text-sm px-4 py-1 rounded-sm font-medium tracking-wide" style={{clipPath: "polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%)"}}>
-                  Technical Writer
+                  Website Developer
                 </span>
               </div>
 
@@ -98,7 +98,7 @@ export const Hero = () => {
             </div>
 
             {/* ===== Right: Photo + Widget ===== */}
-            <div className="w-full lg:w-5/12 order-1 lg:order-2 flex flex-col items-center lg:flex md:hidden">
+            <div className="w-full lg:w-5/12 order-1 lg:order-2 hidden lg:flex flex-col items-center">
               <div className="relative w-full max-w-[420px]">
                 <img
                   src={profileImg}

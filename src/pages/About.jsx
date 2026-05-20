@@ -55,7 +55,7 @@ export const About = () => {
 
   {/* Focus Areas Badges */}
   <div className="flex flex-wrap gap-2">
-    {["Software Architecture", "UI/UX Design", "Technical Writing", "SaaS Development"].map((skill) => (
+    {["Web Development", "UI/UX Design", "Website Copywriting", "SaaS Development"].map((skill) => (
       <span key={skill} className="px-4 py-1.5 rounded-full border border-gray-200 dark:border-gray-800 text-xs font-medium text-gray-500 dark:text-gray-400 bg-gray-50/50 dark:bg-gray-900/50">
         {skill}
       </span>

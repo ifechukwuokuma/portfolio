@@ -22,7 +22,7 @@ export const Insights = () => {
           const parsed = data.items.map((item, i) => ({
             id: i,
             title: item.title,
-            cover: item.thumbnail || item.enclosure?.url || "https://placehold.co/600x400/111/fff?text=IO",
+            cover: item.thumbnail || item.enclosure?.link || "https://placehold.co/600x400/111/fff?text=IO",
             author: item.author || "Ifechukwu Okuma",
             date: new Date(item.pubDate).toLocaleDateString("en-NG", {
               year: "numeric", month: "long", day: "numeric",
@@ -53,7 +53,7 @@ export const Insights = () => {
       <div className="max-w-6xl mx-auto px-4">
 
         {/* Header */}
-        <div className="flex items-center justify-between mb-10">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-10">
           <div>
             <p className="text-[#F9B233] font-semibold">— Insights</p>
             <h2 className="text-3xl md:text-4xl font-bold text-black dark:text-white">
@@ -63,14 +63,24 @@ export const Insights = () => {
 
           {/* Right: Search + Subscribe */}
           <div className="flex items-center gap-3">
-            <div className="flex items-center gap-2">
+            {/* Mobile: full search bar always visible */}
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={(e) => { setSearchQuery(e.target.value); setPage(1); }}
+              placeholder="Search..."
+              className="md:hidden border border-gray-300 dark:border-gray-600 bg-transparent text-black dark:text-white text-sm px-3 py-1.5 rounded-full focus:outline-none focus:border-[#F9B233] w-36"
+            />
+
+            {/* Desktop: icon only, click to toggle */}
+            <div className="hidden md:flex items-center gap-2">
               {searchOpen && (
                 <input
                   type="text"
                   value={searchQuery}
                   onChange={(e) => { setSearchQuery(e.target.value); setPage(1); }}
                   placeholder="Search..."
-                  className="border border-gray-300 dark:border-gray-600 bg-transparent text-black dark:text-white text-sm px-3 py-1.5 rounded-full focus:outline-none focus:border-[#F9B233] w-40 transition-all"
+                  className="border border-gray-300 dark:border-gray-600 bg-transparent text-black dark:text-white text-sm px-3 py-1.5 rounded-full focus:outline-none focus:border-[#F9B233] w-40"
                   autoFocus
                 />
               )}

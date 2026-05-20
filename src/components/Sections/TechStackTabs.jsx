@@ -31,6 +31,7 @@ export const TechStackTabs = () => {
       { name: "JavaScript", icon: <Braces size={26} /> },
       { name: "React", icon: <Layers size={26} /> },
       { name: "TypeScript", icon: <Code size={26} /> },
+      { name: "Next.js", icon: <BookOpen size={26} /> },
     ],
     backend: [
       { name: "Supabase", icon: <Database size={26} /> },
@@ -38,10 +39,10 @@ export const TechStackTabs = () => {
     ],
     tools: [
       { name: "Git", icon: <GitBranch size={26} /> },
+      { name: "Figma", icon: <Palette size={26} /> },
       { name: "GitHub", icon: <Globe size={26} /> },
       { name: "Tailwind CSS", icon: <Palette size={26} /> },
       { name: "Bootstrap CSS", icon: <Layers size={26} /> },
-      { name: "Next.js", icon: <BookOpen size={26} />, learning: true },
     ],
   };
 
@@ -78,12 +79,7 @@ export const TechStackTabs = () => {
             key={index}
             className="relative flex flex-col items-center justify-center bg-gray-50 dark:bg-[#22242a] shadow rounded-2xl py-4 px-4 w-32 hover:scale-105 transition-transform"
           >
-            {tool.learning && (
-              <span className="absolute -top-2 -right-2 bg-[#F9B233] text-black text-[10px] font-bold px-2 py-0.5 rounded-full">
-                Learning
-              </span>
-            )}
-            <div className="p-3 bg-[#F9B233]/10B dark:bg-[#000]/10 rounded-full mb-2 dark:text-white">
+            <div className="p-3 bg-[#F9B233]/10 dark:bg-[#000]/10 rounded-full mb-2 dark:text-white">
               {tool.icon}
             </div>
             <p className="font-semibold text-black dark:text-white text-sm">{tool.name}</p>
