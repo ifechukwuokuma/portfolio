@@ -4,12 +4,24 @@ import {
   Code,
   Server,
   Database,
+<<<<<<< HEAD
   Layers,
   Braces,
   FileCode2,
   Palette,
   BookOpen,
   Smartphone,
+=======
+  Settings,
+  Braces,
+  GitBranch,
+  Layers,
+  Globe,
+  FileCode2,
+  Palette,
+  Boxes,
+  BookOpen,
+>>>>>>> 7b54534e1181ee6269db99b3f3905f6523ca1ed8
 } from "lucide-react";
 
 export const TechStackTabs = () => {
@@ -17,9 +29,14 @@ export const TechStackTabs = () => {
 
   const tabs = [
     { id: "frontend", label: "Frontend", icon: <Code size={18} /> },
+<<<<<<< HEAD
     { id: "framework", label: "Framework", icon: <Layers size={18} /> },
     { id: "backend", label: "Backend", icon: <Server size={18} /> },
     { id: "database", label: "Database", icon: <Database size={18} /> },
+=======
+    { id: "backend", label: "Backend & Database", icon: <Server size={18} /> },
+    { id: "tools", label: "Frameworks & Tools", icon: <Settings size={18} /> },
+>>>>>>> 7b54534e1181ee6269db99b3f3905f6523ca1ed8
   ];
 
   const content = {
@@ -27,6 +44,7 @@ export const TechStackTabs = () => {
       { name: "HTML", icon: <FileCode2 size={26} /> },
       { name: "CSS", icon: <Palette size={26} /> },
       { name: "JavaScript", icon: <Braces size={26} /> },
+<<<<<<< HEAD
       { name: "React Native", icon: <Smartphone size={26} /> },
       { name: "TypeScript", icon: <Code size={26} /> },
     ],
@@ -44,6 +62,22 @@ export const TechStackTabs = () => {
     database: [
       { name: "MySQL", icon: <Database size={26} /> },
       { name: "SQLite", icon: <Database size={26} /> },
+=======
+      { name: "React", icon: <Layers size={26} /> },
+      { name: "TypeScript", icon: <Code size={26} /> },
+      { name: "Next.js", icon: <BookOpen size={26} /> },
+    ],
+    backend: [
+      { name: "Supabase", icon: <Database size={26} /> },
+      { name: "Sanity", icon: <Boxes size={26} /> },
+    ],
+    tools: [
+      { name: "Git", icon: <GitBranch size={26} /> },
+      { name: "Figma", icon: <Palette size={26} /> },
+      { name: "GitHub", icon: <Globe size={26} /> },
+      { name: "Tailwind CSS", icon: <Palette size={26} /> },
+      { name: "Bootstrap CSS", icon: <Layers size={26} /> },
+>>>>>>> 7b54534e1181ee6269db99b3f3905f6523ca1ed8
     ],
   };
 
