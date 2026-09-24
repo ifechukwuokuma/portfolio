@@ -1,0 +1,13 @@
+@import "tailwindcss";
+@variant dark (&:where(.dark, .dark *));
+
+body {
+  background-image: url('/textures/white-texture.png');
+  background-repeat: repeat;
+  background-attachment: fixed;
+}
+
+html.dark body {
+  background-image: url('/textures/black-texture.png');
+}
+
